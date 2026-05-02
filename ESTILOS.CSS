@@ -1,0 +1,379 @@
+*{margin: 0;}
+a{text-decoration: none;
+position: relative;}
+/* Este me sirve mucho para quitar linea de bajo y el relative para linea que ocuparé abajo */
+header {
+    position: fixed;      /* Mantiene el header siempre visible en la parte de arriba */
+    top: 0;
+    left: 0;
+    /* pegado arriba y peago a la izquierda */
+    width: 100%;
+    z-index: 1000;/* propiedad que me ayuda a que esté por encima de todo */
+    transition: background-color 0.5s ease, backdrop-filter 0.5s ease;
+/* }Permite que cuando cambie el color o el desenfoque la animación sea suave (0.5 segundos). */
+
+/* Estilo inicial cuando está arriba */
+}
+header.default {
+    background-color: white; /* color sólido */
+    backdrop-filter: blur(0px);               /* sin desenfoque */
+}
+/* Cuando no hacemos el scroll se mantiene en blanco */
+
+/* Estilo al hacer scroll */
+header.scrolled {
+    background: rgba(0,0,0,0.7); /* más transparente */
+    backdrop-filter: blur(5px);                  /* efecto sutil de desenfoque */
+}
+/* Cuando el header está scrolled */
+/* cuando hacemos el scroll cambia el fondo */
+header h1, header .nav_iconos i {
+    transition: color 0.5s ease;  /* transición suave del color ease es para que lo haga de lento a rapido*/
+}
+
+header.scrolled h1,
+header.scrolled .nav_iconos i {
+    color: white;  /* Cambia a blanco al hacer scroll */
+}
+header.scrolled #lupa{
+    color: rgba(182, 154, 118);
+    /* le mantengo el color pporque se pierde con el blanco */
+} 
+
+
+a::after{
+    /* crea un peseudo elemento después del enlace */
+    content: "";
+    /* elemento vacío que me pide un pseudo elemento */
+    position: absolute;
+    /* Necesito que aecte dentro del a */
+    width: 0;
+    /* empieza la línea deste tamaño */
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: aliceblue;
+    transition: width 0.8s ease;
+    /* se ocupa para el efecto visual */
+}
+
+a:hover::after{
+    width: 100%;
+    /* crece de 0 a 100 */
+}
+
+a:hover{
+    transform: scale(1.2);
+}
+.iconos_iconos{
+    display: flex;
+    height: 100px;
+}
+h1{
+    width: 55%;
+    font-family: cursive;
+    color: rgb(117, 53, 7);
+    font-size: 250%;
+    text-align: right;
+    align-content: center;
+    font-weight: 200;
+}
+.nav_iconos{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    i{color: rgb(117, 53, 7);}
+    
+}
+.buscador{
+    display: flex;
+    align-items: center;
+}
+input{
+    margin-left: 5%; /* quitamos el 15% */
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: solid rgba(117, 53, 7, 0.319) 2px;
+    border-right: none; /* elimina línea entre input y lupa */
+    height: 25px;
+    padding-left: 10px;
+}
+.buscador a{
+    
+    background-color: white;
+    border: solid rgba(117, 53, 7, 0.319) 2px;
+    border-left: none; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 8px;
+    padding: 1px 5px;
+
+}
+.nav_links{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(182, 154, 118);
+    padding: 13px;
+    a{
+        color: rgb(254, 255, 246);
+        margin-left: 8%;
+        margin-right: 8%;
+        font-size: large;
+    }
+   
+}
+ .cont_video{
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 600px;
+ }
+ video{
+    position: absolute;
+    width: 100%;
+    height: 110%;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(50%);
+ }
+.contenido{
+    color: rgb(241, 231, 212);
+    text-align: center;
+    align-items: center;
+    align-content: center;
+    height: 100%;
+    flex-direction: column;
+    h2{
+        font-size: 50px        
+    }
+    i{
+        font-size: xx-large;
+        margin-top: 2%;
+    }
+    }
+    .titulo{
+       color: brown;
+       padding-left: 4%; 
+       padding-top: 4%;
+    }
+    .cont_principal{
+        padding-top: 2%;
+    }
+    .cont_recomendaciones{
+        display: flex;
+        justify-content: space-between;
+        padding: 2% 2%;
+    }
+.cont_recomendaciones div{
+        width: 15%;
+        text-align: center;
+        img{
+            width: 100%;
+        }
+        h3,p,a{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 2%;
+        }
+        a{
+            background-color: rgb(154, 27, 27);
+            color: aliceblue;
+            padding: 1% 6% 1% 6%;
+        }
+}
+.cont_libros{
+    display: flex;    
+    overflow-x: scroll;
+    padding-bottom: 1%;
+
+}
+.cont_libros div{  
+    padding: 2% 5% 0% 4%;     
+    text-align: center;
+        h3,p,a{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 2%;
+        }   
+        strong{
+            color: rgb(170, 99, 17);
+            font-size: large;
+        }
+        a{
+            background-color: rgb(154, 27, 27);
+            color: aliceblue;
+            padding: 1% 6% 1% 6%;
+        }
+        
+}
+.imagen_fondo{
+    margin-top: 1.5%;
+    position: relative;
+    height: 700px;
+    background-image: url('IMAGEN/libreria.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.imagen_fondo::before{
+    content: "";
+    position: absolute;
+    width:100%;
+    height:100%;
+    background: rgba(0, 0, 0, 0.596); /* opacidad */
+}
+
+.texto_conocenos{
+    z-index: 1;
+}
+
+.texto_conocenos h2,
+.texto_conocenos h3{
+    color: rgb(224, 195, 157);
+    font-size: 300%;
+    
+}
+
+.texto_conocenos p{
+    color: rgb(243, 235, 220);
+    font-size: 150%;
+    width: 50%;
+    margin-left: 25%;
+    font-style: oblique;
+} 
+
+#carrito{
+    /* el carrito está fijo aunque se haga scroll */
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    /* lo ubica a 100px del borde superior y 20 px del borde derecho */
+    width: 250px;
+    /* El tamaño que quiero del carrito */
+    background: white;
+    border: 2px solid coral;
+    padding: 10px;
+    display: none;
+    /* este es el que lo oculta para que no se vea cuando recién abrimos la página, solo se verá cuando le de clic al carrito o al ver más, pero eso lo hará JS */
+    background-color: aquamarine;
+}
+
+#carrito h2{
+    color: brown;
+
+}
+
+#carrito li{
+    margin: 5px 0;
+}
+/* este es la tela y efondo gris , para que resalte el carrito */
+#modal-carrito{
+    position: fixed; /* Visible y ocupa toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: none; /* lo oculta pero activa con js */
+    justify-content: center;
+    align-items: center;
+    /* alineado tanto horizontal y verticalmente al centro */
+}
+/* fondo del contenedor del carrito */
+.modal-contenido{
+    background: white;
+    padding: 30px;
+    width: 400px;
+    border-radius: 10px;
+    text-align: center;
+    
+}
+.mocel-contenido h2{
+    color: brown;
+}
+#lista-carrito{
+    list-style: none;
+    margin-top: 20px;
+}
+#lista-carrito li{
+    margin: 10px 0;
+}
+#cerrar-carrito{
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: brown;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+footer{
+    background-color: rgb(182, 154, 118);
+    a,p,li,h1{
+    color: white;
+}
+i{
+    color: rgb(42, 55, 114);
+}
+}
+.footer1{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    h1{
+        text-align: left;
+        border-bottom: rgb(245, 242, 237) 2px solid;
+        width: 95%;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: large;
+        margin-top: 2%;
+    }
+}
+.footer1 p,ul{
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 3%;
+    font-size: 20px;
+    width: 95%;
+}
+.div1{
+    margin-left: 2%;
+}
+ul{
+    list-style: none;
+    margin-left: 0;
+    padding: 0;
+    li{
+        margin-bottom: 1%;
+    }
+}
+.redes_sociales{
+    margin-right: 8%;
+    text-align: center;
+    i{
+        font-size: x-large;
+        margin-right: 4%;
+    }
+}
+footer input{
+    width: 70%;
+    margin-left: 0;
+}
+footer button{
+    height: 10%;
+    border-radius: 0px 10px 10px 0;
+    border-style: none;
+    background-color: rgb(190, 128, 83);
+    color: aliceblue;
+    width: 80px;
+    cursor: pointer;
+}
+.Derechos{
+    text-align: center;
+    font-size: large;
+    padding: 1%;
+}

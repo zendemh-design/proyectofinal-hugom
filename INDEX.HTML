@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="
+https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css
+">
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <!-- PARTE DE CABECERA -->
+    <header>
+        <section class="iconos_iconos">
+            <h1>El Túnel</h1>  
+            <nav class="nav_iconos">
+    <div class="buscador">
+        <input type="search" placeholder="Busca tu libro fevorito...">
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+    </div>
+    <a href="#" id="icono-carrito"><i class="fa-solid fa-person-biking"></i></a>
+    <a href="#"><i class="fa-solid fa-hippo"></i></a>
+    <!-- argega el id para que en js pueda manadarlo a llamar -->
+    <a href="#"><i class="fa-solid fa-cat"></i></a>
+</nav>
+<!-- PARTE DE LOS LINKS DE INICIO -->
+        </section>
+        <nav class="nav_links">
+            <a href="">Inicio</a>
+            <a href="#id_libros">Libros</a>
+            <a href="#id_reco">Lo más leído</a>
+            <a href="">Accesorios</a>
+            <a href="">Sucursales</a>
+        </nav>
+    </header>
+    <!-- PARTE DEL VIDEO -->
+<div class="cont_video">
+    <video src="56485-479679949_small.mp4" muted autoplay loop></video>
+    <section class="contenido">
+        <h2>...Creando nuevos mundos, historias y recuerdos...</h2>
+        <i><q>Vivir consiste en construir futuros recuerdos</q></i>
+    </section>
+
+</div>
+
+<!-- CONTENEDOR GRANDE DE LOS LIBROS -->
+ <SECtion class="cont_principal" id="id_reco">
+    <h2 class="titulo">Recomendaciones</h2>
+    <div class="cont_recomendaciones">
+        <div>
+            <img src="https://www.elsotano.com/sotano_covers/9786075/9786075697055.jpg" alt="El Manantial-Ayn Rand">
+            <h3>El Manantial</h3>
+            <p>Ayn Rand</p>
+            <a href="#">VER MÁS</a>
+        </div>
+
+        <div>
+            <img src="https://www.elsotano.com/sotano_covers/9786070/9786070740749.jpg" alt="Nada-Janne Teller">
+            <h3>Nada</h3>
+            <p>Janne Teller</p>
+            <a href="#">VER MÁS</a>
+        </div>
+        
+        <div>
+            <img src="https://www.elsotano.com/sotano_covers/9786075/9786075575438.jpg" alt="Sed-Amelie Nothomb">
+            <h3>Sed</h3>
+            <p>Amelie Nothomb</p>
+            <a href="#">VER MÁS</a>
+        </div>
+
+        <div>
+            <img src="https://www.elsotano.com/sotano_covers/9786073/9786073195201.jpg" alt="Cadáver Exquisito-Agustina Bazterrica">
+            <h3>Cadáver Exquisito</h3>
+            <p>Agustina Bazterrica</p>
+            <a href="#">VER MÁS</a>
+        </div>     
+    </div>
+ <h2 class="titulo">Libros</h2>
+        <section class="cont_libros"id="id_libros">
+            
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9788433/9788433998972.jpg" alt="Un Verdor Terrible-Benjamin Labatut">
+            <h3>Un Verdor Terrible</h3>
+            <p>Benjamin Labatut</p>
+            <div>
+                <strong>$420.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+                <!-- agregué una clase para poder ocuparla en js, eso en todos los libros que tienen precio -->
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9786073/9786073933568.jpg" alt="Estas Ruinas Que Ves-Jorge Ibarguengoitia">
+            <h3>Estas Ruinas Que Ves</h3>
+            <p>Jorge Ibarguengoitia</p>
+            <div>
+                <strong>$228.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9788410/9788410178779.jpg" alt="Hamnet-Maggie Ofarrell">
+            <h3>Hamnet</h3>
+            <p>Maggie Ofarrell</p>
+            <div>
+                <strong>$575.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9788417/9788417553586.jpg" alt="Una Libertad Luminosa-T. C. Boyle">
+            <h3>Una Libertad Luminosa</h3>
+            <p>T. C. Boyle</p>
+            <div>
+                <strong>$570.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9788420/9788420423562.jpg" alt="El Tambor De Hojalata-Gunter Grass">
+            <h3>El Tambor De Hojalata</h3>
+            <p>Gunter Grass</p>
+            <div>
+                <strong>$649.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9788415/9788415130048.jpg" alt="El Ruletista-Mircea Cartarescu">
+            <h3>El Ruletista</h3>
+            <p>Mircea Cartarescu</p>
+            <div>
+                <strong>$280.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="libros_libros">
+            <img src="https://www.elsotano.com/sotano_covers/9789685/9789685208550.jpg" alt="Pedro Páramo-Juan Rulfo">
+            <h3>Pedro Páramo</h3>
+            <p>Juan Rulfo</p>
+            <div>
+                <strong>$160.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+
+            <div class="">
+            <img src="https://www.elsotano.com/sotano_covers/9786073/9786073831321.jpg" alt="cIEN cUYES-Gustavo Rodríguez">
+            <h3>Cien Cuyes</h3>
+            <p>Gustavo Rodríguez</p>
+            <div>
+                <strong>$360.00</strong>
+                <a href="#" class="agregar-carrito">COMPRAR</a>
+            </div>                
+            </div>
+ </section>
+</section>
+<!-- PARTE DE CONOCENOS IMAGEN DE FONDO EFECTO PARALAX -->
+<section class="imagen_fondo" style="background-image: url(libreria.jpg);">
+    <div class="texto_conocenos">
+        <h2>Conócenos</h2><br>
+        <p>El Túnel es una cafetería ideal para los amantes de la literatura.<br><br>Además de su servicio de venta de libros y productos en línea puedes visitar nuestra sucursal y acompañar tu lectura con una taza de café o bebida de tu elección, o bien, de los diversos eventos culturales que tenemos para ti. <br><br>  Síguenos en redes sociales y mantente atento a la cartelera de eventos.</p><br>
+        <h3>¡Te esperamos!</h3>
+    </div>
+
+</section>
+<!-- el contenedor gigante del carrito -->
+<div id="modal-carrito"> 
+    <!-- es el contenedor del modal, dentro del fondo oscuro del modal que agregaré con css -->
+    <div class="modal-contenido">
+        <h2>🛒 Carrito de compras</h2>
+        <ul id="lista-carrito"></ul>
+        <h3>Total: <span id="total">$0</span></h3>
+        <button id="cerrar-carrito">Cerrar</button>
+        <!-- PAra que cuando aparezca el contenedor se vea este contenido -->
+ </div>
+</div>
+<footer class="footer1">
+    <div class="div1">
+        <h1>El Túnel</h1>
+        <p>Un espacio para los amantes de la literatura. Encuentras la mejor selección de libros, accesorios, y un acogedor espacio en la CDMX para leer y tomar un café con tu libro favorito.</p>
+        <ul class=" ">
+            <li><a href=""><i class="fa-solid fa-map-location-dot"></i>Av. Álvaro Obregón</a></li>
+            <li><a href="tel:5515054533"><i class="fa-solid fa-mobile-retro"></i>5515054533</a></li>
+            <li><a href="mailto:eltunel@gmail.com"><i class="fa-solid fa-envelope"></i>eltunel@gmail.com</a></li>
+        </ul>
+        <div class="redes_sociales">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-square-twitter"></i></a>
+        </div>
+    </div>
+
+    <div>
+        <h1>Información</h1>
+        <ul>
+            <li><a href="">Inicio</a></li>
+            <li><a href="">Acerca de El Túnel</a></li>
+            <li><a href="">Tarjetas de cliente frecuente</a></li>
+            <li><a href="">Ventas al mayoreo</a></li>
+            <li><a href="">Facturación</a></li>
+            <li><a href="">Contáctanos</a></li>
+            <li><a href="">Aviso de privacidad</a></li>
+            <li><a href="">Términos y condiciones</a></li>
+        </ul>
+    </div>
+
+    <div>
+        <h1>Suscríbete</h1>
+        <p>Registrate para recibir noticias de promociones, eventos y actualizaciones.</p>
+        <label for="newsletter"></label>
+        <input type="text" name="newsletter" placeholder="Ingresa tu e-mail">
+        <button type="submit">Enviar</button>
+    </div>
+</footer>
+<footer><p class="Derechos">2026 &copy; El Túnel. Todos los Derechos Reservados. | Diseñado por Paola Martínez Aguilar.</p></footer>
+
+
+
+<!-- Este es para poder crear y abrir mi archivo de javvascript -->
+<script src="carrito.js"></script>
+
+</body>
+</html> 
